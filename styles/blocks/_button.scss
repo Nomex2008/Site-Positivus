@@ -9,6 +9,8 @@
     border: var(--border);
     border-radius: var(--border-radius);
 
+    cursor: pointer;
+
     @include hover {
         background-color: var(--color-accent);
         color: var(--color-dark);
