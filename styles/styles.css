@@ -555,6 +555,10 @@ h5 {
   padding-block: var(--section-padding-y);
 }
 
+.section--hidden-x {
+  overflow-x: hidden;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
