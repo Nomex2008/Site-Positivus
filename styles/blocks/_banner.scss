@@ -1,0 +1,29 @@
+.banner {
+    --bannerImgOffsetY: 24px;
+
+    padding-block: var(--bannerImgOffsetY);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius-large);
+    }
+
+    &__body {
+        padding: 60px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        row-gap: 26px;
+    }
+
+    &__description {
+        max-width: 500px;
+    }
+
+    &__img {
+        margin-block: calc(var(--bannerImgOffsetY) * -1);
+    }
+}

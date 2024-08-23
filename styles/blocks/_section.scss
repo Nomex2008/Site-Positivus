@@ -1,6 +1,22 @@
 .section {
     padding-block: var(--section-padding-y);
-}
-.section--hidden-x {
-    overflow-x: hidden;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        column-gap: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 80px;
+        }
+    }
+    
+    &__description {
+        max-width: 580px;
+    }
+
+    &--hidden-x {
+        overflow-x: hidden;
+    }
 }
