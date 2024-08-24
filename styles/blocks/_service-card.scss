@@ -9,6 +9,12 @@
     border-radius: var(--border-radius-large);
     box-shadow: var(--shadow);
 
+    @include mobile {
+        display: grid;
+        row-gap: 27px;
+        grid-template-columns: auto auto;
+    }
+
     &-accent-bg {
         background-color: var(--color-accent);
     }
@@ -22,16 +28,33 @@
         justify-content: space-between;
         row-gap: 30px;
         max-width: 221px;
+
+        @include mobile {
+            display: contents;
+        }
     }
 
     &__img {
         align-self: center;
+
+        @include desktop {
+            max-width: 50%;
+            height: auto;
+        }
+
+        @include mobile {
+            max-width: 165px;
+        }
     }    
 
     &__title {
         display: flex;
         flex-direction: column;
         align-items: start;
+
+        @include mobile {
+            grid-column: -1/1;
+        }
     }
 
     &__link {
@@ -44,6 +67,10 @@
 
         &:hover {
             opacity: .7;
+        }
+
+        @include mobile {
+            align-self: end;
         }
 
         &--light {
@@ -60,6 +87,12 @@
 
             svg {
                 color: var(--serviceCardLinkIconColor);
+            }
+        }
+
+        &-label {
+            @include mobile {
+                @include visually-hidden
             }
         }
     }
