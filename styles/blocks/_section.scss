@@ -7,6 +7,8 @@
         justify-content: start;
         column-gap: 40px;
 
+        overflow-x: hidden;
+
         @include mobile {
             flex-direction: column;
             row-gap: 30px;
