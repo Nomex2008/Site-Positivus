@@ -1,10 +1,26 @@
 .footer {
+    @include mobile {
+        padding-inline: 0;
+    }
+    overflow-x: hidden;
+    max-width: 100%;
+
     &__inner {
         padding: 50px 60px 50px;
         color: var(--color-light);
         background-color: var(--color-dark);
-        border-radius: var(--border-radius-large) var(--border-radius-large)
-        0 0;
+
+        @include mobile-above {
+            border-radius: var(--border-radius-large) var(--border-radius-large)
+            0 0;
+        }
+        @include mobile {
+            padding: 50px var(--container-padding-x) 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 37px;
+        }
     }
 
     &__navigation {
@@ -16,6 +32,22 @@
         &:not(:last-child) {
             margin-bottom: 66px;
         }
+
+        @include mobile {
+            display: contents;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 37px;
+        }
+    }
+
+    &__soc1als {
+        @include mobile {
+            order: 1;
+        }
     }
 
     &__menu {
@@ -23,6 +55,11 @@
             display: flex;
             align-items: center;
             column-gap: 40px;
+
+            @include mobile {
+                flex-direction: column;
+                row-gap: 15px;
+            }
         }
 
         &-link {
@@ -42,10 +79,21 @@
         justify-content: space-between;
         column-gap: 50px;
 
-        &:not(:last-child) {
-            margin-bottom: 50px;
-            padding-bottom: 50px;
-            border-bottom: 1px solid currentColor;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            row-gap: inherit;
+        }
+
+        @include mobile-above {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+                padding-bottom: 50px;
+                border-bottom: 1px solid currentColor;
+            }
+        }
+        @include mobile-s {
+            width: 100%;
         }
     }
 
@@ -54,6 +102,11 @@
         flex-direction: column;
         align-items: start;
         row-gap: 27px;
+
+        @include mobile {
+            align-items: center;
+            text-align: center;
+        }
 
         &-title {
             color: var(--color-dark);
@@ -76,6 +129,16 @@
     &__extra {
         display: flex;
         column-gap: 40px;
+
+        @include mobile {
+            order: 2;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+            width: 100%;
+            border-top: 1px solid currentColor;
+            padding-top: 37px;
+        }
     }
     &__privacy-policy-link {
         text-decoration: underline;
