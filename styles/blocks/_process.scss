@@ -61,6 +61,8 @@
         }
 
         &-title {
+            @include fluid-text(30, 18);
+
             display: flex;
             align-items: center;
             column-gap: 25px;
@@ -88,6 +90,10 @@
             border: var(--border);
             border-radius: 50%;
             flex-shrink: 0;
+
+            @include mobile {
+                width: 30px;
+            }
 
             &:before,
             &:after {

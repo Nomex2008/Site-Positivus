@@ -6,7 +6,7 @@
     background-color: var(--color-dark-alt);
     border-radius: var(--border-radius);
 
-    @include dekstop {
+    @include desktop {
         flex-direction: column;
         row-gap: 22px;
         width: 100%;

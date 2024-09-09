@@ -31,7 +31,7 @@
       @include fluid-text(16, 14);
     }
   
-    &__input {
+    &__input { 
       width: 100%;
       height: var(--fieldInputHeight);
       padding-inline: 30px;
